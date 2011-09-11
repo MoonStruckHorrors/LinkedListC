@@ -15,6 +15,7 @@ void print(struct LinkedList *ll);
 
 void insert(struct LinkedList *ll, int val) {
 	if(ll->first == NULL) {
+		ll->first = createNode();
 		ll->first->val = val;
 		ll->first->next = NULL;
 	} else {
@@ -55,7 +56,7 @@ void print(struct LinkedList *ll) {
 		}
 		printf("%d\n", n->val);
 		
-		if(n->next = NULL) {
+		if(n->next == NULL) {
 			break;
 		} else {
 			n = n->next;
